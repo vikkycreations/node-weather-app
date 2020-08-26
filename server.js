@@ -33,7 +33,7 @@ const getCoordinates = (place, types) => {
 }
 
 
-const getWeather = ([long, lat]) => {
+const getWeather = ([lat, long]) => {
   const api_darkSky = `https://api.darksky.net/forecast/473fe696d21e65026547b2d50b56014c/${lat},${long}`;
   return axios.get(api_darkSky, {
     httpsAgent: agent
