@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Node Weather app</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <style>
+    *{
+      box-sizing: border-box;
+      outline: none !important;
+    }
+    body{
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+    .flex{
+      display: flex;
+    }
+    .hcenter{
+      justify-content: center;
+    }
+    .vcenter{
+      align-items: center;
+    }
+    .col{
+      flex-direction: column;
+    }
+    .no-border{
+      border: none;
+    }
+    .rounded{
+      border-radius: 5px;
+    }
+    h1{
+      font-size: 32px;
+    }
+    .card{
+      width: 90%;
+      max-width: 350px;
+      height: max-content;
+      padding: 32px;
+      margin: 20px 0;
+      border-radius: 15px;
+      box-shadow: 0 0 15px -5px #121212;
+    }
+    input{
+      padding: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 0 2px #ddd;
+    }
+    select{
+      padding: 10px;
+      border: none;
+      box-shadow: 0 0 0 2px #ddd;
+    }
+    button{
+      padding: 14px 0;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background: #121212;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body class="flex hcenter">
+  <section class="card flex hcenter col">
+      <center><h1>Weather App</h1></center>
+    <form action="/weather" method="GET" class="flex col">
+      <input class="no-border rounded" name="place" type="text" placeholder="Enter a place name.." required/>
+      <select class="rounded" name="types" >
+        <option value="place" selected>Place</option>
+        <option value="district">District</option>
+        <option value="locality">Locality</option>
+        <option value="region">Region</option>
+        <option value="country">Country</option>
+      </select>
+      <button class="rounded no-border" type="submit">Weather Status</button> 
+    </form>
+  </section>
+</body>
+</html>
