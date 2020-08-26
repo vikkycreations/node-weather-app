@@ -98,6 +98,6 @@ app.get("/weather", async (req, res) => {
 })
 
 
-app.listen(9090, () => {
+app.listen(process.env.PORT || 8080, () => {
   console.log("Server running at port 9090");
 })
