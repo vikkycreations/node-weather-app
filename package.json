@@ -2,7 +2,7 @@
   "name": "node-weather-app",
   "version": "1.0.0",
   "description": "A simple weather app using Node.js",
-  "main": "server/server.js",
+  "main": "server.js",
   "dependencies": {
     "axios": "^0.20.0",
     "ejs": "^3.1.5",
